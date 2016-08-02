@@ -81,6 +81,8 @@ public class RedstoneEtherServerAddons extends RedstoneEtherAddons
 
     public boolean deactivateRemote(World world, EntityPlayer player) {
         AddonPlayerInfo info = getPlayerInfo(player);
+        if(info == null)
+            return false;
         if (info.remote == null)
             return false;
 
